@@ -1,0 +1,21 @@
+<!doctype>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width initial-scale=1">
+
+        <!-- Ewentualny css do stronki -->
+        <title> Mój blog </title>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <nav class="navbar navbar-light bg-light">
+                <img src="images/images/logo.png" class="img-fluid" style="width: 50%">
+            </nav>
+        {% block content %}
+        {% endblock %}
+        </div>
+    </body>
+</html>

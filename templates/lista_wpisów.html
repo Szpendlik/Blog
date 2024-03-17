@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if wpisy %}
+    {% for wpis in wpisy %}
+    <div class="card">
+        <div class="card-header">
+            <h4>{{wpis.title}}</h4>
+        </div>
+        <div class="card-doby">
+            <img src="{{ wpis.image.url }}" class="rounded float-start" style="height:150px;margin-right:10px">
+            <p class="card-text">{{ wpis.contex }}</p>
+        </div>
+        <div class="card-footer text-muted">
+            <small> Utworzono: {{ wpis.created_at }} </small>
+            <small> Zmodyfikowano: {{ wpis.updated_at }} </small>
+        </div>
+    </div><br>
+    {% endfor %}
+    {% else %}
+        <p> Brak wpisów na blogu.</p>
+    {% endif %}
+
+{% endblock %}
